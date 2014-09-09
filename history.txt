@@ -1,0 +1,18 @@
+
+************************************
+git tag ReportTool-V1.0-20140826
+************************************
+
+2014-08-26
+1.创建项目
+添加：
+Factory目录（数据库文件）
+lib目录（derby数据库驱动包）
+licenses目录（开源许可协议）
+res目录（图片和xml模板文件）
+src目录（java程序源文件）
+build.xml（ant编译布署文件）
+history.txt（本程序修改记录）
+readme.txt（本程序基本信息、编译方法和注意事项）
+ReportTool.bat（本程序的快速启动脚本）
+.gitignore（git仓库管理文件）

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project name="ReportTool" default="build" basedir=".">
+  <description>The ant project to build ReportTool.</description>
+  <property name="srcDir" location="src" description="源文件的存放目录" />
+  <property name="libDir" location="lib" description="第三方jar包的存放目录" />
+  <property name="antDir" location="ant" description="编译后所有文件存放的根目录" />
+  <property name="binDir" location="${antDir}/bin" description="编译后class文件的存放目录" />
+  <property name="jarDir" location="${antDir}/jar" description="打包后jar包的存放目录" />
+  <property name="jarFile" location="${jarDir}/ReportTool.jar"
+    description="打包后jar包存放的完整路径" />
+  <property name="docDir" location="${antDir}/doc" description="帮助文档的存放目录" />
+  <property name="package" value="com.xiboliya.reporttool"
+    description="包名" />
+  <property name="mainClass" value="ReportTool" description="主类名" />
+  <property name="resFromDir" location="res" description="资源文件的源目录" />
+  <property name="resToDir" location="${binDir}/res" description="资源文件的目标目录" />
+  <target name="init" description="初始化">
+    <delete dir="${binDir}" />
+    <delete dir="${jarDir}" />
+    <mkdir dir="${binDir}" />
+    <mkdir dir="${jarDir}" />
+    <copy todir="${resToDir}" description="复制资源文件">
+      <fileset dir="${resFromDir}" />
+    </copy>
+  </target>
+  <target name="compile" depends="init" description="编译代码">
+    <javac srcdir="${srcDir}" destdir="${binDir}" includeAntRuntime="false" encoding="GB18030">
+      <compilerarg value="-Xlint:unchecked"/>
+      <compilerarg value="-Xlint:deprecation"/>
+    </javac>
+  </target>
+  <target name="unjarLib" depends="init" description="解压第三方jar包，以便于重新打包入程序jar包中">
+    <unjar src="${libDir}/derby.jar" dest="${binDir}">
+      <patternset>
+        <exclude name="META-INF"/>
+        <exclude name="META-INF/MANIFEST.MF"/>
+      </patternset>
+    </unjar>
+    <unjar src="${libDir}/derbytools.jar" dest="${binDir}">
+      <patternset>
+        <exclude name="META-INF"/>
+        <exclude name="META-INF/MANIFEST.MF"/>
+      </patternset>
+    </unjar>
+  </target>
+  <target name="makeJar" depends="init,compile,unjarLib" description="生成jar包">
+    <jar destfile="${jarFile}" basedir="${binDir}" excludes="**/Thumbs.db" description="打包为jar文件，并排除Thumbs.db文件">
+      <manifest>
+        <attribute name="Main-Class" value="${package}.${mainClass}" />
+      </manifest>
+    </jar>
+  </target>
+  <target name="build" depends="init,compile,makeJar" description="编译并打包">
+    <echo message="Ant is building the project." />
+  </target>
+  <target name="doc" description="生成api帮助文档">
+    <javadoc destdir="${docDir}" access="private" encoding="GB18030"
+      description="将所有的包括private在内的属性、方法，都输出到api帮助文档">
+      <fileset dir="${srcDir}">
+        <include name="*.java" />
+      </fileset>
+    </javadoc>
+  </target>
+  <target name="zip" description="将项目打包成zip文件，以便于整包发布">
+    <delete file="${mainClass}.zip" />
+    <zip destfile="${mainClass}.zip" basedir="." excludes="**/Thumbs.db, ant/doc/**, **复件**/**, .git/**, .gitignore"
+      description="将源代码、资源与编译后的ant目录打包成zip文件">
+    </zip>
+  </target>
+  <target name="clean" description="清空编译生成的所有文件">
+    <delete dir="${antDir}" />
+  </target>
+  <target name="clean.bin" description="清空编译生成的.class与资源文件">
+    <delete dir="${binDir}" />
+  </target>
+  <target name="clean.doc" description="清空编译生成的api帮助文档">
+    <delete dir="${docDir}" />
+  </target>
+</project>

@@ -1,0 +1,127 @@
+ <Worksheet ss:Name="ID-{id}">
+  <Table ss:ExpandedColumnCount="8" ss:ExpandedRowCount="15" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:AutoFitWidth="0" ss:Width="116.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="84.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="57.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="106.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="55.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="109.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="64.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="124.5"/>
+   <Row ss:AutoFitHeight="0" ss:Height="39">
+    <Cell ss:MergeAcross="7" ss:StyleID="s65"><Data ss:Type="String">企业走访备案表</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="23.25" ss:StyleID="s25">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">单位名称</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="s72"><Data ss:Type="String">{factoryName}</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">走访时间</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">{interviewDate}</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">企业性质</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">{factoryProperty}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="23.25" ss:StyleID="s25">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">单位地址</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="s53"><Data ss:Type="String">{factoryAddress}</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">成立时间</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">{foundDate}</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">联系邮箱</Data></Cell>
+    <Cell ss:StyleID="m38020700" ss:HRef="mailto:{factoryEmail}"><Data ss:Type="String">{factoryEmail}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="23.25" ss:StyleID="s25">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">企业法人</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">{businessEntity}</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">电话</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">{businessEntityPhone}</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">手机</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">{businessEntityHandset}</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">内销比例</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">{insideRatio}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="23.25" ss:StyleID="s25">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">联系人</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">{linkman}</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">电话</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">{linkmanPhone}</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">手机</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">{linkmanHandset}</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">外销比例</Data></Cell>
+    <Cell ss:StyleID="s29"><Data ss:Type="String">{outsideRatio}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="23.25" ss:StyleID="s25">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">行业类型识别</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">{tradeType}</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">员工人数</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="s55"><Data ss:Type="String">{staffQuantity}</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">买地或租赁厂房</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m38020680"><Data ss:Type="String">{buyOrLease}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="23.25" ss:StyleID="s25">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">主要经营范围</Data></Cell>
+    <Cell ss:MergeAcross="6" ss:StyleID="m38020924"><Data ss:Type="String">{mainBusinessSphere}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="23.25" ss:StyleID="s25">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">注册资本（万元）</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">国别</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m38020944"><Data ss:Type="String">{yearNum}年度 销售额&#10;(万元）</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m38020964"><Data ss:Type="String">{yearSalesVolume}</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m38020864"><Data ss:Type="String">{yearNum}年度利税&#10;（万元）</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m38020984"><Data ss:Type="String">{yearTaxationOfProfit}</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m38021044"><Data ss:Type="String">{yearNum}年度出口创汇&#10;（万美元）</Data></Cell>
+    <Cell ss:MergeDown="1" ss:StyleID="m38021004"><Data ss:Type="String">{yearForeignExchangeEarning}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="30" ss:StyleID="s25">
+    <Cell ss:StyleID="s24"><Data ss:Type="String">{registeredCapital}</Data></Cell>
+    <Cell ss:StyleID="s30"><Data ss:Type="String">{country}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="71.25" ss:StyleID="s25">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">企业简介</Data></Cell>
+    <Cell ss:MergeAcross="6" ss:StyleID="m38020904"><Data ss:Type="String">{factorySynopsis}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="43.5" ss:StyleID="s25">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">企业存在问题&#10;及服务需求</Data></Cell>
+    <Cell ss:MergeAcross="6" ss:StyleID="m38020720"><Data ss:Type="String">{factoryProblemOrNeeds}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="43.5" ss:StyleID="s25">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">展会需求</Data></Cell>
+    <Cell ss:MergeAcross="6" ss:StyleID="m38020820"><Data ss:Type="String">{expositionNeeds}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="43.5">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">其他需要记录事项</Data></Cell>
+    <Cell ss:MergeAcross="6" ss:StyleID="m38020780"><Data ss:Type="String">{otherItems}</Data></Cell>
+   </Row>
+   <Row ss:Height="28.5">
+    <Cell ss:StyleID="s23"><Data ss:Type="String">走访人员</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="s23"><Data ss:Type="String">{interviewPersonnel}</Data></Cell>
+    <Cell ss:StyleID="s23"><Data ss:Type="String">分管领导签    字</Data></Cell>
+    <Cell ss:MergeAcross="2" ss:StyleID="m38020760"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="49.5">
+    <Cell ss:MergeAcross="7" ss:StyleID="s58"><Data ss:Type="String">行业类型识别：家电电子；通讯电子；汽车电子；光电材料；首饰工艺品；玩具；家具工艺品；针织服装；儿童服装；纺织面料；家用纺织；鞋帽；皮革、箱包；食品、果蔬、饮料；肉类、水产品；塑料制品；轮胎橡胶；文化用品；文具；体育、户外休闲用品；机械设备；工业配件；汽车配件；新型材料；船艇；精密仪器；办公家具；居家家具；模具制造；五金制造；轨道交通配套机加工；机电设备；化工产品；油漆涂料；建筑材料；生物制药；海洋生物；环保设备；商贸营销；中介机构；广告创意；礼品包装</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Layout x:Orientation="Landscape"/>
+    <Header x:Margin="0.51181102362204722"/>
+    <Footer x:Margin="0.51181102362204722"/>
+    <PageMargins x:Bottom="0.78740157480314965" x:Left="0.74803149606299213"
+     x:Right="0.74803149606299213" x:Top="0.78740157480314965"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>200</HorizontalResolution>
+    <VerticalResolution>200</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <RangeSelection>R1C1:R1C8</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
